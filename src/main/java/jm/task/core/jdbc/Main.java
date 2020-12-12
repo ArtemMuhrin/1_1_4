@@ -8,10 +8,9 @@ import java.util.List;
 
 public class Main {
 
-    private static UserService userService = new UserServiceImpl();
+    private static final UserService userService = new UserServiceImpl();
 
     public static void main(String[] args) {
-
         userService.dropUsersTable();
         userService.createUsersTable();
         userService.saveUser("Ivan", "Ivanovich", (byte)25);
